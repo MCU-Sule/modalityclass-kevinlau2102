@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox fx:controller="com.example.pt03_2072030.Controller.AddForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="232.0" prefWidth="285.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="TOP_RIGHT" prefHeight="48.0" prefWidth="312.0">
+         <children>
+            <Label text="Tambah Menu">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Line endX="22.585784912109375" startX="-239.37490844726562" startY="1.5497207641601562E-6" strokeWidth="2.0" style="-fx-stroke-dash-array: 5;" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="270.0">
+         <children>
+            <Label fx:id="labelNama" text="Nama Menu :" />
+            <TextField fx:id="namaMenu" />
+            <Label text="Harga Menu :" />
+            <TextField fx:id="hargaMenu" />
+            <Label text="Discount :" />
+            <HBox prefHeight="40.0" prefWidth="310.0">
+               <children>
+                  <ComboBox fx:id="disc" prefHeight="25.0" prefWidth="185.0">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Button fx:id="customDisc" onAction="#goToDiscount" mnemonicParsing="false" prefHeight="25.0" prefWidth="169.0" text="Custom Discount" />
+               </children>
+            </HBox>
+            <Button onAction="#goToMenu" mnemonicParsing="false" prefHeight="25.0" prefWidth="318.0" text="Add Menu" />
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>
