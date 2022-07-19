@@ -32,7 +32,6 @@ public class AddForm {
     private float hargaBack;
     private float discBack;
     private FXMLLoader fxmlLoader;
-    private boolean closed;
     private Stage newStage;
     public void initialize() throws IOException {
         fxmlLoader = new FXMLLoader(MainApplication.class.getResource("AddDiscountForm.fxml"));
@@ -79,11 +78,6 @@ public class AddForm {
     public void setDiscBack(float discBack) {
         this.discBack = discBack;
     }
-
-    public boolean isClosed() {
-        return closed;
-    }
-
     @FXML
     public void goToMenu() {
         this.namaBack = namaMenu.getText();
@@ -97,7 +91,6 @@ public class AddForm {
         hargaMenu.clear();
         customDisc.setText("Custom Discount");
         disc.getSelectionModel().select(0);
-        this.closed = labelNama.getScene().getWindow().isShowing();
         labelNama.getScene().getWindow().hide();
     }
     @FXML

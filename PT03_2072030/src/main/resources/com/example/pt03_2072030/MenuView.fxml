@@ -43,7 +43,7 @@
       </VBox>
    </top>
    <center>
-      <ListView fx:id="listMenu" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <ListView onMouseClicked="#getSelectedItem" fx:id="listMenu" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets bottom="5.0" />
          </BorderPane.margin>
